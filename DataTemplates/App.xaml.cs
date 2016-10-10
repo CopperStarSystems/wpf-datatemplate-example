@@ -1,8 +1,5 @@
-﻿//  --------------------------------------------------------------------------------------
-//  <copyright file="App.xaml.cs" company="Copper Star Systems, LLC">
-//     Copyright 2016 Copper Star Systems, LLC. All Rights Reserved.
-//  </copyright>
-//  --------------------------------------------------------------------------------------
+﻿// App.xaml.cs
+// Created: 2016-10-10
 
 using System.Windows;
 using DataTemplates.ViewModel;

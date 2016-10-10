@@ -1,8 +1,5 @@
-//  --------------------------------------------------------------------------------------
-//  <copyright file="MainViewModel.cs" company="Copper Star Systems, LLC">
-//     Copyright 2016 Copper Star Systems, LLC. All Rights Reserved.
-//  </copyright>
-//  --------------------------------------------------------------------------------------
+// MainViewModel.cs
+// Created: 2016-10-10
 
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +15,7 @@ namespace DataTemplates.ViewModel
 
         public MainViewModel()
         {
-            fruits = new List<Fruit> {new Orange(), new Apple() };
+            fruits = new List<Fruit> {new Orange(), new Apple()};
             SelectedValue = fruits.First();
         }
 

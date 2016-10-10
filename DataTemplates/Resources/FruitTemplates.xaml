@@ -3,12 +3,12 @@
                     xmlns:local="clr-namespace:DataTemplates.Resources"
                     xmlns:model="clr-namespace:DataTemplates.Model"
                     xmlns:userControls="clr-namespace:DataTemplates.UserControls">
-    
+
     <!-- It's a generally-recognized best practice to keep resources such as styles and templates in external ResourceDictionaries.
     This allows us to reuse these assets as needed throughout the application.
     
     This ResourceDictionary contains templates related to Fruit-derived types. -->
-    
+
     <!-- The Orange DataTemplate is super-simple, just to illustrate the general topics.
     Notice that DataTemplates are generally specified according to type (the DataType= part below).
     The reason for this is that DataTemplates are intended to present a specific UI for a specific Type.
@@ -27,10 +27,11 @@
             </Grid.RowDefinitions>
             <Label Content="Type:" Grid.Row="0" Grid.Column="0" />
             <Label Content="{Binding Name}" Grid.Row="0" Grid.Column="1" />
-            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="You selected an Orange.  Orange editing UI would go here."/>
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                   Content="You selected an Orange.  Orange editing UI would go here." />
         </Grid>
     </DataTemplate>
-    
+
     <!-- 
     The Apple template is a little fancier, enabling the user to edit various Apple properties.
     
@@ -67,8 +68,8 @@
             I extracted the actual UI for dumping an Apple's values to AppleDumper
             in the UserControls namespace.
             -->
-            <userControls:AppleDumper Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"></userControls:AppleDumper>
-            
+            <userControls:AppleDumper Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" />
+
         </Grid>
     </DataTemplate>
 </ResourceDictionary>

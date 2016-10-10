@@ -12,7 +12,7 @@
         <!-- For cleanliness and reusability, it's best to keep DataTemplates in external ResourceDictionaries.
              The line below imports our templates from FruitTemplates.xaml in the Resources folder.
         -->
-        <ResourceDictionary Source="Resources\FruitTemplates.xaml"/>
+        <ResourceDictionary Source="Resources\FruitTemplates.xaml" />
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
