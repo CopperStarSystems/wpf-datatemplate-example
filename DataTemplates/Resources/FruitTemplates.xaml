@@ -1,0 +1,74 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DataTemplates.Resources"
+                    xmlns:model="clr-namespace:DataTemplates.Model"
+                    xmlns:userControls="clr-namespace:DataTemplates.UserControls">
+    
+    <!-- It's a generally-recognized best practice to keep resources such as styles and templates in external ResourceDictionaries.
+    This allows us to reuse these assets as needed throughout the application.
+    
+    This ResourceDictionary contains templates related to Fruit-derived types. -->
+    
+    <!-- The Orange DataTemplate is super-simple, just to illustrate the general topics.
+    Notice that DataTemplates are generally specified according to type (the DataType= part below).
+    The reason for this is that DataTemplates are intended to present a specific UI for a specific Type.
+    
+    The Orange template consists of a label to show the fruit name, and a hard-coded Label instead of actual UI.
+    -->
+    <DataTemplate DataType="{x:Type model:Orange}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Content="Type:" Grid.Row="0" Grid.Column="0" />
+            <Label Content="{Binding Name}" Grid.Row="0" Grid.Column="1" />
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="You selected an Orange.  Orange editing UI would go here."/>
+        </Grid>
+    </DataTemplate>
+    
+    <!-- 
+    The Apple template is a little fancier, enabling the user to edit various Apple properties.
+    
+    The top half of the UI is a form for editing, while the bottom half shows the edits as they are
+    made (Note:  By default in WPF, textboxes do not fire PropertyChanged events until they lose focus)
+    -->
+    <DataTemplate DataType="{x:Type model:Apple}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Content="Type:" Grid.Row="0" Grid.Column="0" />
+            <Label Content="{Binding Name}" Grid.Row="0" Grid.Column="1" />
+
+            <Label Content="Breed:" Grid.Row="1" Grid.Column="0" />
+            <TextBox Text="{Binding Breed}" Grid.Row="1" Grid.Column="1" />
+
+            <Label Content="Flavor:" Grid.Row="2" Grid.Column="0" />
+            <TextBox Text="{Binding Flavor}" Grid.Row="2" Grid.Column="1" />
+
+            <Label Content="Is good for Baking:" Grid.Row="3" Grid.Column="0" />
+            <CheckBox IsChecked="{Binding IsGoodForBaking}" Grid.Row="3" Grid.Column="1" />
+
+            <!-- 
+            This section just displays the changes made in the editor above. 
+            I extracted the actual UI for dumping an Apple's values to AppleDumper
+            in the UserControls namespace.
+            -->
+            <userControls:AppleDumper Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"></userControls:AppleDumper>
+            
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>
