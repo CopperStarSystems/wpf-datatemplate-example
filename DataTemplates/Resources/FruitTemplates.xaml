@@ -22,8 +22,8 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Label Content="Type:" Grid.Row="0" Grid.Column="0" />
             <Label Content="{Binding Name}" Grid.Row="0" Grid.Column="1" />
@@ -44,20 +44,20 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Label Content="Type:" Grid.Row="0" Grid.Column="0" />
             <Label Content="{Binding Name}" Grid.Row="0" Grid.Column="1" />
 
             <Label Content="Breed:" Grid.Row="1" Grid.Column="0" />
-            <TextBox Text="{Binding Breed}" Grid.Row="1" Grid.Column="1" />
+            <TextBox Text="{Binding Breed, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" />
 
             <Label Content="Flavor:" Grid.Row="2" Grid.Column="0" />
-            <TextBox Text="{Binding Flavor}" Grid.Row="2" Grid.Column="1" />
+            <TextBox Text="{Binding Flavor, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" />
 
             <Label Content="Is good for Baking:" Grid.Row="3" Grid.Column="0" />
             <CheckBox IsChecked="{Binding IsGoodForBaking}" Grid.Row="3" Grid.Column="1" />
